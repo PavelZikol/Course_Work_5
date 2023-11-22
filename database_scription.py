@@ -1,5 +1,4 @@
 import psycopg2
-import json
 from abstract_class import DBOperator
 
 

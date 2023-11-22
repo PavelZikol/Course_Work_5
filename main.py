@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
     json_instance = HHJsonManager(vacancies_list)
     json_instance.save_to_json(json_file_name)
-    print(f"Запись вакансий в библиотеку прошла успешно")
+    print(f"Я записал")
     json_vac_list = json_instance.get_json(json_file_name)
 
     params = config(ini_config_file, section_params)  # Создание переменной параметров доступа к БД
@@ -27,7 +27,7 @@ if __name__ == "__main__":
     db_script = DBScriptor()
 
     db_script.create_db(params, db_name)
-    print(f"База данных компаний и вакансий создана")
+    print(f"База данных готова")
 
     params.update({'dbname': db_name})
 
@@ -118,5 +118,5 @@ if __name__ == "__main__":
                             break
 
                 if user_func_input == "0":
-                    print("Пока пока!")
+                    print("До связи.")
                     break
